@@ -15,7 +15,7 @@ The application is split into the frontend and backend which communicate via API
 ![image](https://github.com/Ananya7565/Bhojan/assets/79797979/064246ef-33d3-4d24-97e9-2ddbe514aa87)
 
 # App View
-![image](https://github.com/Ananya7565/Bhojan/assets/79797979/2465eb77-00ec-419a-bbec-f841cbd3db69)
+![image](https://github.com/Ananya7565/Bhojan/assets/79797979/a6b324ac-396b-4c51-bcc5-f7bba90de9a7)
 ![image](https://github.com/Ananya7565/Bhojan/assets/79797979/db5890ea-71c4-4b8f-a057-0df13e1c1681)
 ![image](https://github.com/Ananya7565/Bhojan/assets/79797979/84e967a4-5f6e-40d2-aba2-41e33bf65254)
 ![image](https://github.com/Ananya7565/Bhojan/assets/79797979/8adf8293-62e1-4e0c-a631-621108a3229d)
