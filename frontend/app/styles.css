@@ -1,0 +1,986 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display&display=swap');
+.qwe {
+    font-size: 80px;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: rgb(0, 0, 0);
+    outline: none;
+    text-align: center;
+  }
+
+  .head-qwe {
+    font-size: 80px;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: rgb(0, 0, 0);
+    outline: none;
+    text-align: center;
+  }
+  
+  
+ /* styles.css */
+
+/* For mobile devices with screen width less than 768px */
+@media (max-width: 842px) {
+  .pos_small {
+    padding-right: 15%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 842px) {
+  .pos_small_star {
+    padding-left: 8%;
+    text-align: center;
+  }
+}
+
+
+
+/* For larger screens with screen width 768px and above */
+/*
+@media (min-width: 843px) {
+  .pos_small {
+    
+    text-align: center;
+  }
+}
+*/
+
+/* For mobile devices (less than 640px) */
+@media (max-width: 842px) {
+  .search-input {
+    height: 25px;
+    width: 150px;
+    
+    /* Add any other styles specific to mobile here */
+  }
+}
+
+/* For larger screens (greater than or equal to 640px) */
+@media (min-width: 842px) {
+  .search-input {
+    height: 30px;
+    width:250px;
+   
+    /* Add any other styles specific to larger screens here */
+  }
+}
+
+
+
+@media (max-width: 842px) {
+  .padd {
+    padding-top: 20px;
+  }
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: #e4dbce;
+    border-radius: 10px;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+    /*box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;*/
+    box-shadow: rgba(182,174,162) 6px 6px 12px 0 , rgb(252, 244, 234) -6px -6px 12px 0;
+    /*box-shadow: "6px 6px 12px 0 #b6aea2, -6px -6px 12px 0 #fff";*/
+    overflow: hidden;
+    /* Set margin-left to 0px to move the card container to the left */
+    margin-left:0px;
+    margin-top: 80px;
+    margin-bottom: -70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px; /* Add some padding to create space between card content and edges */
+  }
+  
+
+
+  
+  .card:hover {
+    transition: transform 125ms;
+    transform: translateY(-10px);
+  }
+
+  .abc:hover,
+  .abc:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+    transition: transform 125ms;
+  }
+
+  .icons-container {
+    position: relative;
+  }
+  
+  .icons-bg {
+    background-color: #d3cabd; /* Set your desired background color */
+    width: 100%;
+    height: 7vh; /* Adjust the height to your preference */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Media query for mobile screens */
+  @media (max-width: 842px) {
+    .icons {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+ 
+
+  @media (max-width: 842px) {
+    .abc svg {
+      width: 34px; /* Adjust the size as needed */
+      height: 34px; /* Keep the same aspect ratio */
+    }
+  }
+
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+}
+
+  .card-container {
+    display: flex; /* Set display to flex to align cards horizontally */
+    justify-content: flex-start; /* Align cards to the left of the container */
+    gap: 35px; /* Add some space between cards */
+    
+  }
+  
+  /* Image inside the card */
+  .card img {
+    width: 100%; /* Adjust image width to fit the card container */
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  /* Title text inside the card */
+  .card .title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1c0f13;
+  }
+  
+  /* Description text inside the card */
+  .card .description {
+    font-size: 15px;
+    font-weight: 300;
+    color: #1c0f13;
+  }
+  
+  /* Time icon and text inside the card */
+  .card .time {
+    display: flex;
+    align-items: center;
+    color: #1c0f13;
+    margin-bottom: 0px;
+  }
+  
+  /* Clock icon */
+  .card .time svg {
+    width: 20px;
+    height: 20px;
+    /*
+    margin-right: 5px;
+    margin-bottom: -110px;*/
+  }
+  
+  /* Clock text */
+  .card .time p {
+    font-size: 15px;
+    font-weight: 350;
+    /*
+    margin-bottom: -110px;*/
+  }
+  
+  /* Calendar icon */
+  .card .truck {
+    width: 30px;
+    height: 30px;
+    /*
+    margin-bottom: -25px;
+    margin-left: 85px;*/
+  }
+  
+  .card .sun {
+    width: 30px;
+    height: 30px;
+    /*
+    margin-bottom: -110px;
+    margin-left: 130px;*/
+    margin-left: 10px;
+    margin-bottom: 0px;;
+  }
+  
+  .card .icons_bottom {
+    /*margin-bottom: -25px;*/
+    margin-top: 20px;
+    display: flex;
+  }
+  /* Timer icon */
+  
+  .line{
+    cursor: pointer;
+  }
+  .line:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: -3px;
+    transform: scaleX(0);
+   
+    background: #000000 ;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+  }
+  
+  .line:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  
+.plan {
+    box-shadow: rgba(182,174,162) 6px 6px 12px 0 , rgb(252, 244, 234) -6px -6px 12px 0;
+}
+.plan_item {
+  box-shadow: rgba(182,174,162) 6px 6px 12px 0 ;
+}
+.plan_2 {
+  box-shadow: rgba(182,174,162) 6px 6px 12px 0 , rgb(252, 244, 234) -6px -6px 12px 0;
+}
+
+
+  
+  /* The fast way */
+  
+  .make-it-fast {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  /* Pre-render the bigger shadow, but hide it */
+  
+  .make-it-fast::after {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  
+  /* Transition to showing the bigger shadow on hover */
+  
+  .make-it-fast:hover::after {
+    opacity: 1;
+  }
+  
+  /* Scale up the box */
+  .plan:hover {
+    transform: scale(1.2, 1.2);
+  }
+  .plan_item:hover {
+    transform: scale(1.2, 1.2);
+  }
+
+  .plan_1:hover {
+    transform: scale(1.2, 1.2);
+  }
+  
+  
+
+
+
+
+  /* Fade in the pseudo-element with the bigger shadow */
+  .plan:hover::after {
+    opacity: 1;
+  }
+  .plan_item:hover::after {
+    opacity: 1;
+  }
+
+  .pic_cover {
+    height: 550px;
+    object-fit: cover;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 842px) {
+    /* Adjust the flex direction for mobile layout */
+    .card-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    /* Adjust the width and height of the image */
+    .card img {
+      height: 150px;
+    }
+  
+    /* Adjust the width of the card */
+    .card {
+      width: 100%;
+      max-width: none;
+      
+    }
+    .card-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+
+
+
+
+
+.container_page {
+	width: 40vw;
+	padding: 3rem;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	position: relative;
+	border-radius: 3rem;
+	background: linear-gradient(
+    to right bottom,
+    rgb(255, 184, 142, 0.44),
+    rgba(255, 255, 255, 0.5)
+  );
+  
+
+	&::-webkit-scrollbar {
+		width: 0;
+	}
+
+	&::before {
+		content: "";
+		top: -10rem;
+		left: -10rem;
+		width: 40rem;
+		height: 40rem;
+		position: absolute;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.35);
+	}
+
+	&::after {
+		content: "";
+		bottom: 0rem;
+		right: -10rem;
+		width: 40rem;
+		height: 40rem;
+		margin-bottom: -25rem;
+		position: absolute;
+		border-radius: 50%;
+		background: rgba(255, 185, 142, 0.6);
+	}
+
+	
+
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.new_button {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+.new_button:before,
+.new_button:after{
+  position: absolute;
+  content: "Confirm";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.new_button:before{
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.new_button:after{
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.new_button:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For screens with a maximum width of 768px (small screens) */
+/*
+@media (max-width: 842px) {
+  .grid-cols-4 {
+    grid-template-columns: 1fr; 
+  }
+
+  .ml-80 {
+    margin-left: 0; 
+  }
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-item-1 {
+  
+}
+
+.grid-item-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}*/
+
+/* For screens with a maximum width of 768px (small screens) */
+/*
+@media (max-width: 842px) {
+  .grid-container {
+    flex-direction: column;
+  }
+
+  .grid-item-2 {
+    margin-top: 10px; 
+  }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.calendar-month {
+  position: relative;
+  background-color: #ececec;
+  border: solid 1px #838383;
+  margin-top: 40px;
+  width:100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
+}
+
+.calendar-month-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e2d9cc;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
+}
+
+.calendar-month-header-selected-month {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+}
+
+.calendar-month-header-selectors {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.calendar-month-header-selectors > * {
+  cursor: pointer;
+}
+
+.day-of-week {
+  color: #000000;
+  font-size: 18px;
+  background-color: #e2d9cc;
+  font-weight:600;
+  font-family: 'Playfair Display', serif;
+}
+
+.day-of-week,
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  
+}
+
+.day-of-week > * {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.days-grid {
+  height: 100%;
+  position: relative;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  border-top: solid 1px #818080;
+  
+}
+
+.calendar-day {
+  position: relative;
+  min-height: 70px;
+  font-size: 16px;
+  background-color: #e2d9cc;
+  color: #000;
+  
+  padding: 5px;
+}
+
+.calendar-day > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 2px;
+  width: 22px;
+  height: 20px;
+}
+
+.calendar-day--not-current {
+  background-color: #c4c4c4;
+  color: var(--grey-300);
+  
+}
+
+.calendar-day--today {
+  padding-top: 4px;
+  background-color: #F5ECDF;
+}
+
+.calendar-day--today > span {
+  color: #000000;
+  font-weight: bold;
+  
+}
+.calendar-day--selected {
+  background-color: #F5ECDF;
+  font-weight: bold;
+}
+
+
+
+
+
+.scrollable-list {
+  max-height: 150px; /* Adjust the height as needed */
+  overflow-y: auto;
+   /* Add a border for clarity */
+  
+}
