@@ -1,0 +1,163 @@
+// seeds/seedData.ts
+
+import { Knex } from 'knex';
+
+const seedData = {
+  user: [
+    { user_id: 1, name: 'Ananya', password: 'qwe', address: '#25,banashankari', phone_no: 12345678 },
+    { user_id: 2, name: 'Adithi', password: 'abcd', address: '#12,kanakpura', phone_no: 43947261 },
+    { user_id: 3, name: 'Rita', password: 'mnb', address: '#45,ring road', phone_no: 47562938 }
+  ],
+  preferences: [
+    { user_id: 1, diet_followed: 'no carbs', allergies: 'peanuts', dietary_lifestyle: 'vegan', no_of_people: 4 },
+    { user_id: 2, diet_followed: 'low fat', allergies: 'dairy', dietary_lifestyle: 'non-vegetarian', no_of_people: 3 },
+    { user_id: 3, diet_followed: 'low sugar', allergies: 'fish', dietary_lifestyle: 'vegetarian', no_of_people: 2 }
+  ],
+  ingredients_used: [
+    { ingredient_id: 1, recipe_id: 1, ingredient_name: 'Pumpkin', quantity: 1, unit: 'medium sized', name_of_recipe: 'Pumpkin Soup',no_of_people: 3 },
+    { ingredient_id: 2, recipe_id: 1, ingredient_name: 'Onion', quantity: 1, unit: '', name_of_recipe: 'Pumpkin Soup',no_of_people: 3 },
+    { ingredient_id: 3, recipe_id: 1, ingredient_name: 'Garlic', quantity: 2, unit: 'cloves', name_of_recipe: 'Pumpkin Soup',no_of_people: 3 },
+    { ingredient_id: 4, recipe_id: 1, ingredient_name: 'Chicken broth', quantity: 4, unit: 'cups', name_of_recipe: 'Pumpkin Soup',no_of_people: 3 },
+    { ingredient_id: 5, recipe_id: 1, ingredient_name: 'Coconut milk', quantity: 1, unit: 'cup', name_of_recipe: 'Pumpkin Soup',no_of_people: 3 },
+    { ingredient_id: 6, recipe_id: 1, ingredient_name: 'Butter', quantity: 2, unit: 'tablespoons', name_of_recipe: 'Pumpkin Soup',no_of_people: 3 },
+    { ingredient_id: 7, recipe_id: 1, ingredient_name: 'Pepper', quantity: 1, unit: 'teaspoon', name_of_recipe: 'Pumpkin Soup',no_of_people: 3 },
+    { ingredient_id: 8, recipe_id: 1, ingredient_name: 'Pumpkin Seeds', quantity: 4, unit: 'teaspoons', name_of_recipe: 'Pumpkin Soup',no_of_people: 3 },
+
+
+
+
+
+    { ingredient_id: 9, recipe_id: 2, ingredient_name: 'Beetroot', quantity: 3, unit: 'medium sized', name_of_recipe: 'Beetroot Salad',no_of_people: 3 },
+    { ingredient_id: 10, recipe_id: 2, ingredient_name: 'Feta cheese', quantity: 1, unit: 'cup', name_of_recipe: 'Beetroot Salad',no_of_people: 3 },
+    { ingredient_id: 11, recipe_id: 2, ingredient_name: 'Walnut', quantity: 2, unit: 'tablespoons', name_of_recipe: 'Beetroot Salad',no_of_people: 3 },
+    { ingredient_id: 12, recipe_id: 2, ingredient_name: 'Parsley', quantity: 1, unit: 'tablespoon', name_of_recipe: 'Beetroot Salad',no_of_people: 3 },
+    { ingredient_id: 13, recipe_id: 2, ingredient_name: 'Vinegar', quantity: 2, unit: 'tablespoons', name_of_recipe: 'Beetroot Salad',no_of_people: 3 },
+    { ingredient_id: 14, recipe_id: 2, ingredient_name: 'Olive oil', quantity: 2, unit: 'tablespoons', name_of_recipe: 'Beetroot Salad',no_of_people: 3 },
+    { ingredient_id: 15, recipe_id: 2, ingredient_name: 'Honey', quantity: 1, unit: 'tablespoon', name_of_recipe: 'Beetroot Salad',no_of_people: 3 },
+    { ingredient_id: 16, recipe_id: 2, ingredient_name: 'Pepper', quantity: 2, unit: 'teaspoons', name_of_recipe: 'Beetroot Salad',no_of_people: 3 },
+
+
+
+
+
+    { ingredient_id: 17, recipe_id: 3, ingredient_name: 'Carrot', quantity: 3, unit: 'medium sized', name_of_recipe: 'Carrot Sandwich',no_of_people: 2 },
+    { ingredient_id: 18, recipe_id: 3, ingredient_name: 'Cream Cheese', quantity: 4, unit: 'tablespoons', name_of_recipe: 'Carrot Sandwich',no_of_people: 2 },
+    { ingredient_id: 19, recipe_id: 3, ingredient_name: 'Walnut', quantity: 1, unit: 'tablespoon', name_of_recipe: 'Carrot Sandwich',no_of_people: 2 },
+    { ingredient_id: 20, recipe_id: 3, ingredient_name: 'Bread', quantity: 2, unit: 'slices', name_of_recipe: 'Carrot Sandwich',no_of_people: 2 },
+    { ingredient_id: 21, recipe_id: 3, ingredient_name: 'Tomato', quantity: 2, unit: 'large sized', name_of_recipe: 'Carrot Sandwich',no_of_people: 2 },
+    { ingredient_id: 22, recipe_id: 3, ingredient_name: 'Butter', quantity: 1, unit: 'tablespoon', name_of_recipe: 'Carrot Sandwich',no_of_people: 2 },
+    { ingredient_id: 23, recipe_id: 3, ingredient_name: 'Salt', quantity: 2, unit: 'teaspoon', name_of_recipe: 'Carrot Sandwich',no_of_people: 2 },
+    { ingredient_id: 24, recipe_id: 3, ingredient_name: 'Pepper', quantity: 2, unit: 'teaspoon', name_of_recipe: 'Carrot Sandwich',no_of_people: 2 },
+
+
+
+
+
+    { ingredient_id: 25, recipe_id: 4, ingredient_name: 'flour', quantity: 2, unit: 'cups', name_of_recipe: 'Mango Cupcake',no_of_people: 5 },
+    { ingredient_id: 26, recipe_id: 4, ingredient_name: 'Mango', quantity: 2, unit: 'large', name_of_recipe: 'Mango Cupcake',no_of_people: 5 },
+    { ingredient_id: 27, recipe_id: 4, ingredient_name: 'Sugar', quantity: 1, unit: 'cup', name_of_recipe: 'Mango Cupcake',no_of_people: 5 },
+    { ingredient_id: 28, recipe_id: 4, ingredient_name: 'Vanilla extract', quantity: 1, unit: 'teaspoon', name_of_recipe: 'Mango Cupcake',no_of_people: 5 },
+    { ingredient_id: 29, recipe_id: 4, ingredient_name: 'Eggs', quantity: 3, unit: '', name_of_recipe: 'Mango Cupcake',no_of_people: 5 },
+
+
+
+
+
+    { ingredient_id: 30, recipe_id: 5, ingredient_name: 'rice', quantity: 1, unit: 'cup', name_of_recipe: 'Dosa',no_of_people: 4 },
+    { ingredient_id: 31, recipe_id: 5, ingredient_name: 'urad dal', quantity: 1, unit: 'cup', name_of_recipe: 'Dosa',no_of_people: 4 },
+    { ingredient_id: 32, recipe_id: 5, ingredient_name: 'Salt', quantity: 2, unit: 'tablespoons', name_of_recipe: 'Dosa',no_of_people: 4 },
+    { ingredient_id: 33, recipe_id: 5, ingredient_name: 'Water', quantity: 3, unit: 'cups', name_of_recipe: 'Dosa',no_of_people: 4 },
+
+
+
+
+    { ingredient_id: 34, recipe_id: 6, ingredient_name: 'rice', quantity: 1, unit: 'cup', name_of_recipe: 'Idly',no_of_people: 4 },
+    { ingredient_id: 35, recipe_id: 6, ingredient_name: 'urad dal', quantity: 1, unit: 'cup', name_of_recipe: 'Idly',no_of_people: 4 },
+    { ingredient_id: 36, recipe_id: 6, ingredient_name: 'Salt', quantity: 2, unit: 'tablespoons', name_of_recipe: 'Idly',no_of_people: 4 },
+    { ingredient_id: 37, recipe_id: 6, ingredient_name: 'Water', quantity: 3, unit: 'cups', name_of_recipe: 'Idly',no_of_people: 4 },
+
+
+
+
+
+    { ingredient_id: 38, recipe_id: 7, ingredient_name: 'Heavy cream', quantity: 2, unit: 'cups', name_of_recipe: 'Ice Cream',no_of_people: 5 },
+    { ingredient_id: 39, recipe_id: 7, ingredient_name: 'condensed milk', quantity: 1, unit: 'can', name_of_recipe: 'Ice Cream',no_of_people: 5 },
+    { ingredient_id: 40, recipe_id: 7, ingredient_name: 'Vanilla extract', quantity: 2, unit: 'teaspoons', name_of_recipe: 'Ice Cream',no_of_people: 5 },
+
+
+
+
+
+    { ingredient_id: 41, recipe_id: 8, ingredient_name: 'Paneer', quantity: 200, unit: 'grams', name_of_recipe: 'Paneer Tikka',no_of_people: 1 },
+    { ingredient_id: 42, recipe_id: 8, ingredient_name: 'turmeric powder', quantity: 1, unit: 'teaspoon', name_of_recipe: 'Paneer Tikka',no_of_people: 1 },
+    { ingredient_id: 43, recipe_id: 8, ingredient_name: 'Gram flour', quantity: 2, unit: 'tablespoons', name_of_recipe: 'Paneer Tikka',no_of_people: 1 },
+    { ingredient_id: 44, recipe_id: 8, ingredient_name: 'Red chili powder', quantity: 1, unit: 'tablespoon', name_of_recipe: 'Paneer Tikka',no_of_people: 1 },
+    { ingredient_id: 45, recipe_id: 8, ingredient_name: 'cumin powder', quantity: 1, unit: 'teaspoon', name_of_recipe: 'Paneer Tikka',no_of_people: 1 },
+    { ingredient_id: 46, recipe_id: 8, ingredient_name: 'oil', quantity: 1, unit: 'tablespoon', name_of_recipe: 'Paneer Tikka',no_of_people: 1 },
+  
+
+
+
+    { ingredient_id: 47, recipe_id: 9, ingredient_name: 'apple', quantity: 2, unit: '', name_of_recipe: 'Fruit Salad',no_of_people: 10 },
+    { ingredient_id: 48, recipe_id: 9, ingredient_name: 'orange', quantity: 2, unit: '', name_of_recipe: 'Fruit Salad',no_of_people: 10 },
+    { ingredient_id: 49, recipe_id: 9, ingredient_name: 'mango', quantity: 1, unit: '', name_of_recipe: 'Fruit Salad',no_of_people: 10 },
+    { ingredient_id: 50, recipe_id: 9, ingredient_name: 'honey', quantity: 1, unit: 'tablespoon', name_of_recipe: 'Fruit Salad',no_of_people: 10 },
+    { ingredient_id: 51, recipe_id: 9, ingredient_name: 'cinnamon', quantity: 2, unit: 'teaspoons', name_of_recipe: 'Fruit Salad',no_of_people: 10 },
+
+
+    { ingredient_id: 52, recipe_id: 10, ingredient_name: 'flour', quantity: 1, unit: 'cup', name_of_recipe: 'Roti',no_of_people: 6 },
+    { ingredient_id: 53, recipe_id: 10, ingredient_name: 'salt', quantity: 1, unit: 'teaspoon', name_of_recipe: 'Roti',no_of_people: 6 },
+    { ingredient_id: 54, recipe_id: 10, ingredient_name: 'water', quantity: 2, unit: 'cups', name_of_recipe: 'Roti',no_of_people: 6 },
+    { ingredient_id: 55, recipe_id: 10, ingredient_name: 'ghee', quantity: 2, unit: 'teaspoons', name_of_recipe: 'Roti',no_of_people: 6 },
+
+  ],
+  recipe: [
+    { recipe_id: 1, dietary_lifestyle: 'vegan', diet_followed: 'low fat', image: '/images/image1.jpg', instructions: 'To make pumpkin soup, start by melting 2 tablespoons of butter or heating olive oil in a large pot over medium heat. Add a chopped onion and 2 minced garlic cloves to the pot, sautéing them until the onion turns translucent and the garlic becomes fragrant. Introduce the chopped pumpkin to the pot, stirring it alongside the sautéed onion and garlic. Pour in 4 cups of vegetable or chicken broth, ensuring that the pumpkin is mostly submerged. Allow the mixture to come to a boil and then reduce the heat to a gentle simmer. Let it cook for about 20-25 minutes until the pumpkin turns tender and can be easily pierced with a fork. Employ an immersion blender or transfer the mixture to a countertop blender in batches to blend the soup until it becomes smooth and creamy. If using a countertop blender, return the blended soup to the pot and stir in 1 cup of heavy cream or coconut milk. Give it a good stir to combine. Season the soup with salt, pepper, and any optional spices you desire, such as nutmeg, cinnamon, or ginger. Heat the soup on low until it is warmed through. Finally, serve the pumpkin soup in bowls, adding optional toppings like toasted pumpkin seeds, croutons, or chopped herbs for an extra touch of flavor and texture.', cook_time: 50, name_of_recipe: 'Pumpkin Soup', description: 'Feel the spiciness and season vegetables', season: 'allseasons' },
+    { recipe_id: 2, dietary_lifestyle: 'vegetarian', diet_followed: 'low sugar', image: '/images/image2.jpg', instructions: 'In a large mixing bowl, combine 3-4 peeled and cooked, thinly sliced or diced beetroots, 1/2 cup crumbled feta cheese or goat cheese (optional), and 1/4 cup toasted, chopped walnuts or pecans. In a small bowl, whisk together 2 tablespoons balsamic vinegar, 2 tablespoons extra-virgin olive oil, 1 tablespoon honey or maple syrup, and a pinch of salt and pepper. Drizzle the dressing over the beetroot mixture and gently toss. Sprinkle with 1/4 cup chopped fresh parsley or dill. If desired, arrange mixed salad greens on serving plates, then spoon the dressed beetroot mixture over the greens. Enjoy this colorful and flavorful beetroot salad as a refreshing side or a light main course.', cook_time: 30, name_of_recipe: 'Beetroot Salad', description: 'Deliciousness served on a plate', season: 'summer' },
+    { recipe_id: 3, dietary_lifestyle: 'vegetarian', diet_followed: 'non dairy', image: '/images/image3.jpg', instructions: 'Spread 4 slices of whole-grain bread with a thin layer of cream cheese or hummus. On two of the slices, layer 1 cup of grated carrots that have been lightly seasoned with salt and pepper. Top the carrots with 1/2 cup of baby spinach leaves. Drizzle 1 tablespoon of balsamic vinegar or your favorite vinaigrette over the spinach. Place the remaining two slices of bread on top to create sandwiches. Cut the sandwiches in half diagonally and enjoy your nutritious and flavorful carrot sandwich. You can customize this sandwich by adding additional ingredients like sliced avocado, roasted red pepper strips, or sprouts for extra texture and flavor.', cook_time: 70, name_of_recipe: 'Carrot Sandwich', description: 'Bringing flavor to life, one bite at a time', season: 'winter' },
+    { recipe_id: 4, dietary_lifestyle: 'non vegetarian', diet_followed: 'low fat', image: '/images/image4.jpeg',instructions: 'Preheat your oven to 350°F (175°C) and line a cupcake tin with paper liners. In a bowl, whisk together 1 and 1/2 cups all-purpose flour, 1 and 1/2 teaspoons baking powder, and a pinch of salt. In a separate bowl, cream together 1/2 cup softened butter and 3/4 cup granulated sugar until light and fluffy. Beat in 2 large eggs, one at a time, and then mix in 1 teaspoon vanilla extract. Gradually add the dry flour mixture to the wet ingredients, alternating with 1/2 cup pureed mango (you can make this by blending ripe mango pieces). Fill each cupcake liner about two-thirds full with the batter. Bake for 18-20 minutes or until a toothpick inserted into the center of a cupcake comes out clean. Allow the cupcakes to cool in the tin for a few minutes before transferring them to a wire rack to cool completely. For the frosting, beat 1/2 cup softened butter until creamy. Gradually add 2 cups powdered sugar and 1/4 cup mango puree, beating until smooth and fluffy. If desired, add a drop of yellow food coloring for a more vibrant color. Once the cupcakes are completely cool, frost them with the mango frosting. Optionally, garnish with mango slices or a sprinkle of toasted coconut. Enjoy your delectable homemade mango cupcakes ',cook_time: 90, name_of_recipe: 'Mango Cupcake', description: 'Savoring every last bite of mango', season: 'summer'  },
+    { recipe_id: 5, dietary_lifestyle: 'vegetarian', diet_followed: 'low iron', image: '/images/image5.jpg',instructions: 'Rinse and soak 1 cup of regular rice and 1/4 cup of urad dal (split black gram) in separate bowls for at least 4 hours (or overnight). After soaking, drain the water and grind the rice and urad dal separately with a little water to make smooth pastes. Mix the rice and urad dal pastes together in a large bowl. Add 1/2 teaspoon of fenugreek seeds, and salt to taste. Combine well and let the batter ferment in a warm place for about 8-12 hours or until it is slightly bubbly and has a tangy aroma.',cook_time: 20, name_of_recipe: 'Dosa', description: 'Dosa cravings: Satisfied completely!', season: 'all season'  },
+    { recipe_id: 6, dietary_lifestyle: 'vegetarian', diet_followed: 'non dairy', image: '/images/image6.jpg',instructions: 'To prepare idli, soak 1 cup of regular rice and 1/2 cup of urad dal (split black gram) separately for 4-6 hours or overnight. Grind the urad dal into a smooth paste and the rice into a slightly coarse texture, then combine them in a bowl along with 1/2 teaspoon of fenugreek seeds and salt to taste. Let the batter ferment for 8-12 hours. Grease idli molds, stir the fermented batter, and pour it into the molds. Steam for 10-12 minutes until cooked through. Serve the soft, spongy idlis with coconut chutney, sambar, or tomato chutney for a traditional and delightful South Indian meal.',cook_time: 20, name_of_recipe: 'Idly', description: 'Idly-Simple yet incredibly flavorful', season: 'all season'  },
+    { recipe_id: 7, dietary_lifestyle: 'non vegetarian', diet_followed: 'high fat', image: '/images/image7.jpg',instructions: 'To create homemade ice cream, start by whisking together 2 cups of heavy cream and 1 can of sweetened condensed milk until well combined. Add in desired flavorings such as vanilla extract, cocoa powder, fruit puree, or crushed cookies. Whip the mixture until soft peaks form. Transfer the mixture to a lidded container, layering it with additional flavorings like chocolate chips, nuts, or swirls of caramel if desired. Cover and freeze the mixture for at least 6 hours or until firm. Enjoy your creamy homemade ice cream as a delightful frozen treat on its own or as a base for creative dessert concoctions.',cook_time: 80, name_of_recipe: 'Ice Cream', description: 'Scoops of happiness: Ice cream edition!', season: 'summer'  },
+    { recipe_id: 8, dietary_lifestyle: 'vegetarian', diet_followed: 'low fat', image: '/images/image8.jpg',instructions: 'To prepare delicious paneer tikka, start by cutting 250 grams of paneer (Indian cottage cheese) into cubes and marinating them in a mixture of 1/2 cup thick yogurt, 2 tablespoons gram flour (besan), 1 tablespoon ginger-garlic paste, 1 tablespoon red chili powder, 1/2 teaspoon turmeric powder, 1 teaspoon garam masala, 1 teaspoon cumin powder, 1 teaspoon coriander powder, 1 tablespoon lemon juice, 1 tablespoon oil, and salt to taste. Allow the paneer to marinate for at least 1-2 hours in the refrigerator. Thread the marinated paneer cubes onto skewers, alternating with colorful bell pepper and onion pieces. Grill the skewers on a preheated barbecue or in an oven at 180°C (350°F) for about 15-20 minutes, turning occasionally until the paneer and vegetables are charred and cooked through. Brush with a little oil or melted butter during grilling. Serve the aromatic and flavorful paneer tikka hot with mint chutney, sliced onions, and lemon wedges as a popular appetizer or snack in Indian cuisine.',cook_time: 90, name_of_recipe: 'Paneer Tikka', description: 'Grilled to perfection: Paneer Tikka love!', season: 'monsoon'  },
+    { recipe_id: 9, dietary_lifestyle: 'non vegetarian', diet_followed: 'low fat', image: '/images/image9.jpg',instructions: 'To prepare a refreshing fruit salad, gather a variety of fresh fruits such as sliced strawberries, cubed watermelon, diced pineapple, halved grapes, sliced kiwi, and blueberries in a large bowl. If desired, add citrus fruits like orange segments for tanginess. For a touch of sweetness, drizzle 2 tablespoons of honey or maple syrup over the fruits, and optionally, sprinkle a pinch of cinnamon for extra flavor. Gently toss the fruits to coat them with the honey and cinnamon. Refrigerate the fruit salad for about 30 minutes to allow the flavors to meld and the salad to chill. Just before serving, garnish with a handful of chopped mint leaves to enhance the aroma and freshness. This colorful and vibrant fruit salad is a perfect healthy dessert or a refreshing side dish for any occasion.',cook_time: 10, name_of_recipe: 'Fruit Salad', description: 'Tasty and exotic fruit salad!', season: 'summer'  },
+    { recipe_id: 10, dietary_lifestyle: 'non vegetarian', diet_followed: 'low fibre', image: '/images/image10.jpeg',instructions: 'To make soft and delicious rotis, begin by mixing 2 cups of whole wheat flour and a pinch of salt in a bowl. Gradually add water while kneading to form a smooth and pliable dough. Divide the dough into golf ball-sized portions and shape them into smooth balls. Roll each ball in dry flour and flatten it slightly. Roll out the dough balls into thin, round discs using a rolling pin, dusting with more flour as needed to prevent sticking. Heat a skillet or tawa over medium-high heat and place a rolled-out roti on it. Cook until bubbles appear on the surface, then flip the roti and cook the other side until light brown spots develop. Gently press the roti with a spatula to help it puff up. Remove the roti from the skillet and brush it with ghee or butter if desired. Repeat the process with the remaining dough balls. Serve the warm, soft rotis with your favorite curries, vegetables, or dips for a delicious and wholesome meal.',cook_time: 70, name_of_recipe: 'Roti', description: 'From the tawa to the plate -Roti', season: 'all seasons'  }
+  ],
+  calendar: [
+    { user_id: 1, date: '2023-12-22', no_of_days: 3, duration: 5 },
+    { user_id: 2, date: '2022-10-23', no_of_days: 2, duration: 3 },
+    { user_id: 3, date: '2021-1-12', no_of_days: 1, duration: 4 }
+  ],
+  order_details: [
+    { order_id: 1, ingredients: 'apple,orange', name: 'cake', detail_id: 3, total_cost: 5 },
+    { order_id: 2, ingredients: 'tomato,peanut', name: 'gravy', detail_id: 4, total_cost: 7 },
+    { order_id: 3, ingredients: 'wheat,water', name: 'roti', detail_id: 2, total_cost: 6 }
+  ],
+  individual_day: [
+    { recipe_id: 1, recipe_name: 'tomato rice', meal_category: 'lunch', date: 12 },
+    { recipe_id: 2, recipe_name: 'biryani', meal_category: 'dinner', date: 11 },
+    { recipe_id: 3, recipe_name: 'brown rice', meal_category: 'breakfast', date: 13 }
+  ],
+  order_master: [
+    { user_id: 1, order_id: 2, date: '2023-12-23' },
+    { user_id: 2, order_id: 4, date: '2022-10-21' },
+    { user_id: 3, order_id: 3, date: '2022-11-22' },
+  ],
+  delivery_table: [
+    { order_id: 1, delivery_partner: 'swiggy', address: 'padmanabhanagar', estimated_arrival_date: 22, booked_date: 13 },
+    { order_id: 2, delivery_partner: 'swiggy', address: 'banashankari', estimated_arrival_date: 14, booked_date: 12 },
+    { order_id: 3, delivery_partner: 'zomato', address: 'ring road', estimated_arrival_date: 12, booked_date: 11 }
+  ],
+};
+
+export async function seed(knex: Knex): Promise<void> {
+  await knex('user').insert(seedData.user);
+  await knex('preferences').insert(seedData.preferences);
+  await knex('ingredients_used').insert(seedData.ingredients_used);
+  await knex('recipe').insert(seedData.recipe);
+  await knex('calendar').insert(seedData.calendar);
+  await knex('order_details').insert(seedData.order_details);
+  await knex('individual_day').insert(seedData.individual_day);
+  await knex('order_master').insert(seedData.order_master);
+  await knex('delivery_table').insert(seedData.delivery_table);
+}
