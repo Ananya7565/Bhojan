@@ -1,0 +1,35 @@
+import knex, { Knex } from 'knex';
+import tableDefinitions from '../tableDefinitions';
+
+
+/**
+ * The tableOrder array consists of the table names, in case a table is to be added to the database, add its name in 
+ * the array and in tableDefinitions.ts add it definition(table name with attributes) 
+ */ 
+const tableOrder : string [] = [
+  'user',
+  'preferences',
+  'ingredients_used',
+  'recipe',
+  'calendar',
+  'order_details',
+  'individual_day',
+  'order_master',
+  'delivery_table'
+];
+export async function up(knex: Knex): Promise<void> {
+    for (const tableName of tableOrder) {
+        if (tableDefinitions[tableName]) {
+            await knex.schema.createTable(tableName, tableDefinitions[tableName]);
+        } 
+        else {
+            throw new Error(`Table definition for '${tableName}' not found.`);
+        }
+    }
+}
+
+export async function down(knex: Knex): Promise<void> {
+    for (const tableName of tableOrder.reverse()) {
+        await knex.schema.dropTableIfExists(tableName);
+    }
+}
